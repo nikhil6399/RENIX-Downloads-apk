@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikhil6399.github.io/RENIX-Downloads-apk/sitemap.xml
