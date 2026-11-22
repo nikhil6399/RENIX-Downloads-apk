@@ -25,7 +25,7 @@ section{padding:34px 0}h2{text-align:center;font-size:27px;margin:0 0 22px}.grid
 <h2 style="margin:0 0 10px;text-align:center">RENIX APK DOWNLOAD KARNE KE STEPS</h2>
 <ol style="color:#e7f5ea;padding-left:24px">
 <li><b>DOWNLOAD APK</b> button dabayein.</li>
-<li>GitHub Release page par <b>app-release.apk</b> file par tap karein.</li>
+<li>APK seedha download hona shuru ho jayega. GitHub page ya sign-in ki zaroorat nahi hai.</li>
 <li>Download poora hone ke baad notification ya Downloads folder se APK kholein.</li>
 <li>Android ke install prompts follow karein. Agar Play Protect warning aaye, pehle warning ko dhyan se padhein; bina samjhe security protection band na karein.</li>
 </ol>
@@ -44,7 +44,7 @@ Aapka browser video playback support nahi karta.
 <div class="tag">FOCUS • LEARN • GROW</div>
 <h1>RENIX</h1>
 <p>A smarter space for study and productivity. Reduce distractions, discover learning videos and build focused study sessions.</p>
-<a class="download" id="downloadBtn" href="https://github.com/nikhil6399/Renix/releases/download/v1.0.0/app-release.apk">↓ &nbsp; DOWNLOAD APK</a>
+<a class="download" id="downloadBtn" href="https://github.com/nikhil6399/Renix/releases/latest/download/app-release.apk">↓ &nbsp; DOWNLOAD APK</a>
 <span class="sub" id="version">Latest Android release</span>
 <div class="status" id="status" aria-live="polite"></div>
 </div>
@@ -62,26 +62,14 @@ Aapka browser video playback support nahi karta.
 <section>
 <h2>How to install</h2>
 <ol class="steps">
-<li>Tap the Download APK button to open the latest RENIX release.</li>
-<li>Choose the APK file under Assets and wait for it to download.</li>
+<li>Tap Download APK. The latest RENIX APK will download directly.</li>
+<li>You do not need to open GitHub or sign in to download the public APK.</li>
 <li>Open the downloaded APK and follow Android's installation prompts.</li>
 <li>After installation, open RENIX and review the setup and permissions shown in the app.</li>
 </ol>
 </section>
 </main>
 <footer class="foot">RENIX • Official Download Page</footer>
-<script>
-(async function(){
- const btn=document.getElementById('downloadBtn'), status=document.getElementById('status'), version=document.getElementById('version');
- try{
-  const response=await fetch('https://api.github.com/repos/nikhil6399/Renix/releases/latest',{headers:{'Accept':'application/vnd.github+json'}});
-  if(!response.ok) throw new Error('Release unavailable');
-  const release=await response.json();
-  const apk=(release.assets||[]).find(a=>a.name.toLowerCase().endsWith('.apk'));
-  if(apk){btn.href=apk.browser_download_url;version.textContent=release.tag_name+' • '+apk.name;}
-  else{btn.href=release.html_url;status.textContent='APK asset was not found in the latest release. Open the release page to check Assets.';}
- }catch(e){status.textContent='If the download does not start, open the latest release page and select the APK under Assets.';}
-})();
-</script>
+
 </body>
 </html>
